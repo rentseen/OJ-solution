@@ -1,10 +1,10 @@
 public class Solution {
-    /*//dp
-    public static int maxProfit(int[] prices, int fee) {
-        int profit[] = new int[prices.length+1];
-        for(int i=1; i<=prices.length; i++){
+    //dp
+    /*public static int maxProfit(int[] prices, int fee) {
+        int profit[] = new int[prices.length];
+        for(int i=1; i<profit.length; i++){
             for(int j=0; j<i; j++){
-                int tmp = prices[i-1]-prices[j]-fee>0?prices[i-1]-prices[j]-fee:0;
+                int tmp = prices[i]-prices[j]-fee>0?prices[i]-prices[j]-fee:0;
                 if(profit[j]+tmp>profit[i]){
                     profit[i]=profit[j]+tmp;
                 }
